@@ -21,6 +21,7 @@ Example:
 ```
 
 Result:
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ----
@@ -38,10 +39,15 @@ https://img.youtube.com/vi/<VIDEO ID>/3.jpg
 ```
 
 Result:
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/default.jpg)](https://youtu.be/T-D1KVIuvjA)
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](https://youtu.be/T-D1KVIuvjA)
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/1.jpg)](https://youtu.be/T-D1KVIuvjA)
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/2.jpg)](https://youtu.be/T-D1KVIuvjA)
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/3.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
@@ -53,6 +59,7 @@ https://img.youtube.com/vi/<VIDEO ID>/hqdefault.jpg
 ```
 
 Result:
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/hqdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
@@ -64,6 +71,7 @@ https://img.youtube.com/vi/<VIDEO ID>/mqdefault.jpg
 ```
 
 Result:
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/mqdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
@@ -75,6 +83,7 @@ https://img.youtube.com/vi/<VIDEO ID>/sddefault.jpg
 ```
 
 Result:
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/sddefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
@@ -86,6 +95,7 @@ https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg
 ```
 
 Result:
+
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
