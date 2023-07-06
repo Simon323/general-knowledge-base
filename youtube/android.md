@@ -1,6 +1,7 @@
 ## Project Setup | Chat application | Android Studio
   [![Watch the video](https://img.youtube.com/vi/O4SQlpPZEdo/0.jpg)](https://www.youtube.com/watch?v=O4SQlpPZEdo)
-  **YouTube**: `https://www.youtube.com/watch?v=O4SQlpPZEdo`
+  
+  **YouTube**: https://www.youtube.com/watch?v=O4SQlpPZEdo
 
 ---
 
