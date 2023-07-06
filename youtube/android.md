@@ -9,6 +9,7 @@
   [![Watch the video](https://img.youtube.com/vi/pEkg1mQihmU/0.jpg)](https://www.youtube.com/watch?v=pEkg1mQihmU)
 
   **YouTube**: https://www.youtube.com/watch?v=pEkg1mQihmU&ab_channel=burakselcuk
+  
   **Github**: https://github.com/burakselcuk1/ExoPlayerYT
 
 ---
@@ -22,5 +23,5 @@
 
 ## Exoplayer Player Video Quality Android Studio with source code || stylish Video player
   [![Watch the video](https://img.youtube.com/vi/J4Eu_FWBfh8/0.jpg)](https://youtu.be/J4Eu_FWBfh8)
-  
+
   **YouTube**: https://www.youtube.com/watch?v=J4Eu_FWBfh8
