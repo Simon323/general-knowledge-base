@@ -1,3 +1,12 @@
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Project Setup | Chat application | Android Studio](#project-setup--chat-application--android-studio)
+- [ExoPlayer](#exoplayer)
+- [Advanced usage ExoPlayer](#advanced-usage-exoplayer)
+- [Exoplayer Player Video Quality Android Studio with source code || stylish Video player](#exoplayer-player-video-quality-android-studio-with-source-code--stylish-video-player)
+
+
 ## Project Setup | Chat application | Android Studio
   [![Watch the video](https://img.youtube.com/vi/O4SQlpPZEdo/0.jpg)](https://www.youtube.com/watch?v=O4SQlpPZEdo)
 
