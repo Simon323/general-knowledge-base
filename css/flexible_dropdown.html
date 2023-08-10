@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>Test 001</li>
+    <li>Test 002</li>
+    <li>Test 003</li>
+    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+  </ul>
+
+  <ul>
+    <li>Test 001</li>
+    <li>Test 002</li>
+    <li>Test 003</li>
+    <li>
+      <!-- <select class="select"> -->
+      <select>
+        <option>option 1</option>
+        <option>option 2</option>
+        <option>option 3</option>
+        <option>option 4</option>
+        <option>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</option>
+      </select>
+    </li>
+  </ul>
+</body>
+</html>
+
+<style>
+  ul, li{
+    margin:0;
+    padding:0;
+    
+    list-style-type:none;
+}
+
+ul li{
+    display: block;
+    float:left;
+}
+
+ul li:last-child{
+    background-color: #ddd;
+
+    float:none;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-left: -5px;
+}
+
+.select {
+  box-sizing: border-box;
+  display: block;
+  width: 200px;
+  height: 34.5px;
+  padding: 5px 22px 3px 11px;
+  font: 400 16px/24px sans-serif;
+  color: #464a4c;
+  vertical-align: middle;
+  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjEyIiBoZWlnaHQ9IjciPgoJPGRlZnM+CgkJPGNsaXBQYXRoIGlkPSJjbGlwXzAiPgoJCQk8cmVjdCB4PSItNDE1IiB5PSItNjYyIiB3aWR0aD0iMTQzNyIgaGVpZ2h0PSIyMjE2IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXBfMCkiPgoJCTxwYXRoIGZpbGw9InJnYig2NSw2NSw2NSkiIHN0cm9rZT0ibm9uZSIgZD0iTTAuNjUzNDQzIDQuNzY4MzdlLTA3TDExLjM0NjEgLTQuNzY4MzdlLTA3QzExLjk0MDIgLTQuNzY4MzdlLTA3IDEyLjE2ODIgMC41ODQ0ODggMTEuODY4MiAwLjkwNzY0OUw2LjU1MDMzIDYuNzE0MDRDNi4yNDczMSA3LjAzNjAzIDUuNzUzNzcgNy4xMTc3IDUuNDUwNzYgNi43OTQ1NEwwLjEzMjkxIDAuODY2ODE3Qy0wLjE3MDEwOSAwLjU0NDgyMyAwLjA2MjQwNTYgNC43NjgzN2UtMDcgMC42NTM0NDMgNC43NjgzN2UtMDciLz4KCTwvZz4KPC9zdmc+Cg==) no-repeat right 6px top 13px;
+  border: 1px solid #D6D6D6;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+</style>

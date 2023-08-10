@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="left">
+     This is a longer text. This is a longer text. 
+    </div>
+    <div class="right">
+    This is a shorter text. 
+    </div>
+    
+  </div>
+  
+  <div class="wrapper">
+  
+    <div class="left">
+     This is an even longer text. This is an even longer text.
+    </div>
+    <div class="right">
+    This is a shorter text. 
+    </div>
+    
+  </div>
+</body>
+</html>
+<style>
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .left,
+  .right {
+    flex: 1 0 50%;
+    background: lightgreen;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .right {
+    background: lightblue;
+  }
+</style>
