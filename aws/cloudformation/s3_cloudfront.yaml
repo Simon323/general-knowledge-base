@@ -1,0 +1,129 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: A template for static hosting using S3 bucket and CloudFront
+
+Parameters:
+  BucketName:
+    Type: String
+    Default: "static-hosting-bucket"
+    Description: S3 Bucket name
+
+Outputs:
+  S3BucketName:
+    Value:
+      Ref: S3Bucket
+  CloudFrontURL:
+    Description: "URL of the CloudFront distribution"
+    Value:
+      Fn::GetAtt:
+        - CloudFrontDistribution
+        - DomainName
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private
+      BucketName: !Ref BucketName
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders: ["*"]
+            AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - "*"
+
+  CloudFrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: "Legacy Access Identity"
+
+  CacheOptimizedPolicy:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: CacheOptimizedCustom
+        DefaultTTL: 3600
+        MaxTTL: 31536000
+        MinTTL: 1
+        ParametersInCacheKeyAndForwardedToOrigin:
+          CookiesConfig:
+            CookieBehavior: 'none'
+          EnableAcceptEncodingBrotli: true
+          EnableAcceptEncodingGzip: true
+          HeadersConfig:
+            HeaderBehavior: 'none'
+          QueryStringsConfig:
+            QueryStringBehavior: 'none'
+
+  CORSS3OriginPolicy:
+    Type: AWS::CloudFront::OriginRequestPolicy
+    Properties:
+      OriginRequestPolicyConfig:
+        Name: CORS-S3Origin-Custom
+        CookiesConfig:
+          CookieBehavior: 'none'
+        QueryStringsConfig:
+          QueryStringBehavior: 'none'
+        HeadersConfig:
+          HeaderBehavior: 'whitelist'
+          Headers:
+            - origin
+            - access-control-request-headers
+            - access-control-request-method
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    DependsOn:
+      - S3Bucket
+      - CloudFrontOriginAccessIdentity
+      - CacheOptimizedPolicy
+      - CORSS3OriginPolicy
+    Properties:
+      DistributionConfig:
+        Origins:
+          - DomainName:
+              Fn::GetAtt:
+                - S3Bucket
+                - DomainName
+            Id: static-hosting
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub "origin-access-identity/cloudfront/${CloudFrontOriginAccessIdentity}"
+        Enabled: "true"
+        DefaultRootObject: index.html
+        HttpVersion: http2
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          Compress: true
+          TargetOriginId: static-hosting
+          ForwardedValues:
+            QueryString: "false"
+            Cookies:
+              Forward: none
+          ViewerProtocolPolicy: allow-all
+          CachePolicyId: !Ref CacheOptimizedPolicy
+          OriginRequestPolicyId: !Ref CORSS3OriginPolicy
+
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: "cloudfront.amazonaws.com"
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${S3Bucket}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::Id-of-IAM-user:distribution/${CloudFrontDistribution}"
+          - Effect: Allow
+            Principal:
+              CanonicalUser: !GetAtt CloudFrontOriginAccessIdentity.S3CanonicalUserId
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${S3Bucket}/*"
