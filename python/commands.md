@@ -8,3 +8,8 @@ python -m http.server 5555
 pip install httpwatcher
 httpwatcher
 ```
+
+## Install packages localy
+```bash
+pip install -r requirements.txt -t ./
+```
