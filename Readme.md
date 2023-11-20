@@ -30,15 +30,16 @@ In this repository, you will find small yet powerful tools that facilitate data 
 If you want to use the Tech Knowledge Base, you can do so in one of the following ways:
 
 1. Clone this repository to your computer:
+
 ```bash
 git clone https://github.com/Simon323/general-knowledge-base
 ```
 
 2. Browse the files online:
-You can browse and copy the code snippets, commands, and tools that interest you using the GitHub interface.
+   You can browse and copy the code snippets, commands, and tools that interest you using the GitHub interface.
 
 3. Contribute to the repository:
-If you have something valuable to add to the Tech Knowledge Base, I encourage you to submit pull requests. Together, we can improve this repository and make it even more useful for the programming community.
+   If you have something valuable to add to the Tech Knowledge Base, I encourage you to submit pull requests. Together, we can improve this repository and make it even more useful for the programming community.
 
 ## License
 
