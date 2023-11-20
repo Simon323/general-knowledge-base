@@ -1,0 +1,28 @@
+{
+  "MetricDataQueries": [
+    {
+      "Id": "m1",
+      "MetricStat": {
+        "Metric": {
+          "Namespace": "AWS/MediaLive",
+          "MetricName": "NetworkIn",
+          "Dimensions": [
+            {
+              "Name": "ChannelId",
+              "Value": "7430321"
+            },
+            {
+              "Name": "Pipeline",
+              "Value": "0"
+            }
+          ]
+        },
+        "Period": 3600,
+        "Stat": "Average"
+      },
+      "ReturnData": true
+    }
+  ],
+  "StartTime": "2023-11-06T23:18:0000",
+  "EndTime": "2023-11-09T23:18:0000"
+}

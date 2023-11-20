@@ -1,0 +1,25 @@
+{
+  "MetricDataQueries": [
+    {
+      "Id": "m1",
+      "MetricStat": {
+        "Metric": {
+          "Namespace": "AWS/EC2",
+          "MetricName": "CPUUtilization",
+          "Dimensions": [
+            {
+              "Name": "InstanceId",
+              "Value": "i-j432j9fsds9n32nds"
+            }
+          ]
+        },
+        "Period": 3600,
+        "Stat": "Average",
+        "Unit": "Percent"
+      },
+      "ReturnData": true
+    }
+  ],
+  "StartTime": "2023-11-09T04:00:0000",
+  "EndTime": "2023-11-09T04:30:0000"
+}

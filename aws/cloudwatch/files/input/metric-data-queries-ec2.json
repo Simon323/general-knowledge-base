@@ -1,0 +1,21 @@
+[
+  {
+    "Id": "m1",
+    "MetricStat": {
+      "Metric": {
+        "Namespace": "AWS/EC2",
+        "MetricName": "CPUUtilization",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": "i-j432j9fsds9n32nds"
+          }
+        ]
+      },
+      "Period": 3600,
+      "Stat": "Average",
+      "Unit": "Percent"
+    },
+    "ReturnData": true
+  }
+]
