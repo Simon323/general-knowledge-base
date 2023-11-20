@@ -6,6 +6,7 @@
 - [Uninstall package](#uninstall-package)
 - [Update packages](#update-packages)
 - [Fix code](#fix-code)
+- [Generate *.g*dart](#generate-gdart)
 
 ## Clean
 ```bash
@@ -36,4 +37,26 @@ flutter pub upgrade --major-versions
 ```bash
 dart fix --dry-run
 dart fix --apply
+```
+
+## Generate *.g*dart
+
+1. Install as dev dependencies:
+  - build_runner
+  - json_serializable
+2. In dart class file
+```dart
+part 'user.g.dart';
+
+@JsonSerializable(
+  createToJson: false,
+)
+
+class User {
+  String Name;
+}
+```
+3. In terminal run command
+```bash
+flutter pub run build_runner build
 ```
