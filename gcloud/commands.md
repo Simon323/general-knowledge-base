@@ -9,6 +9,7 @@
 - [Auth list](#auth-list)
 - [Login](#login)
 - [List components / install / use / update](#list-components--install--use--update)
+- [Local credentials](#local-credentials)
 
 ## Init
 
@@ -37,7 +38,7 @@ gcloud projects list
 ## Set project
 
 ```bash
-gcloud config set project project_name
+gcloud config set project PROJECT_ID
 ```
 
 ## Auth list
@@ -59,4 +60,10 @@ gcloud components list
 gcloud components install component_name_id
 gcloud component_name_id
 gcloud components update
+```
+
+## Local credentials
+
+```bash
+gcloud auth application-default login
 ```
