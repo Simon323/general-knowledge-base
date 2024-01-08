@@ -11,6 +11,8 @@
 - [List components / install / use / update](#list-components--install--use--update)
 - [Local credentials](#local-credentials)
 - [Auth token](#auth-token)
+- [List functions](#list-functions)
+- [Invoke function](#invoke-function)
 
 ## Init
 
@@ -73,4 +75,16 @@ gcloud auth application-default login
 
 ```bash
 gcloud auth print-access-token
+```
+
+## List functions
+
+```bash
+gcloud functions list
+```
+
+## Invoke function
+
+```bash
+gcloud functions call function_name --data={} --region=europe-west3
 ```
