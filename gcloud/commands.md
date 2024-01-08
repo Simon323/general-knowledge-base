@@ -10,6 +10,7 @@
 - [Login](#login)
 - [List components / install / use / update](#list-components--install--use--update)
 - [Local credentials](#local-credentials)
+- [Auth token](#auth-token)
 
 ## Init
 
@@ -66,4 +67,10 @@ gcloud components update
 
 ```bash
 gcloud auth application-default login
+```
+
+## Auth token
+
+```bash
+gcloud auth print-access-token
 ```
