@@ -262,6 +262,24 @@ $ git log --pretty="- %s"
 
 ## Tag
 
+### List tags
+
+```bash
+$ git tag
+```
+
+### Tag checkout
+
+```bash
+$ git checkout v1.0.0
+```
+
+### Create branch from tag
+
+```bash
+$ git checkout -b branch_name v1.0.0
+```
+
 ### Create tag
 
 ```bash
