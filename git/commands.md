@@ -224,6 +224,11 @@ $ git log --pretty="%s"
 $ git log --pretty="- %s"
 ```
 
+### Filter logs
+```bash
+git log --all --author="John Doe" --pretty=format:"%C(yellow)%h%C(reset) %C(green)%ad%C(reset) %C(cyan)%an%C(reset) %s" --date=short --since="2023-01-01" --until="2023-12-31"
+```
+
 ---------------------------------------------------------
 
 ## Tag
@@ -232,6 +237,12 @@ $ git log --pretty="- %s"
 ```bash
 $ git tag <tagname>
 $ git push origin --tags
+```
+
+### Delete Tag
+```bash
+git tag -d tag_name
+git push origin --delete tag_name
 ```
 
 ---------------------------------------------------------
